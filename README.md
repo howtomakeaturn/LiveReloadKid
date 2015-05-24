@@ -49,8 +49,19 @@ Route::get('/monitor', function(){
         public_path('/js'), app_path('views')
     ]);
     
-    echo ($kid->monitor());
+    echo $kid->monitor();
 });
+```
+And then in the client side
+```
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+<script src='live-reload-kid.js'></script>
+<script>
+    LiveReloadKid.start({
+        url: '/monitor'
+    });
+</script>
+
 ```
 
 # Thanks to
