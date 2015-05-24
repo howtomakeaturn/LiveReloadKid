@@ -6,6 +6,8 @@ require('../vendor/autoload.php');
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
 <script src='live-reload-kid.js'></script>
 <script>
-    LiveReloadKid.start();
+    LiveReloadKid.start({
+        url: 'monitor.php'
+    });
 </script>
 wwww

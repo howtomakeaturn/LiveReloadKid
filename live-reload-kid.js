@@ -2,8 +2,10 @@ var LiveReloadKid = {
     
     timestamp: null,
     
+    url: null,
+    
     update: function(){
-        $.get('/monitor.php', {}, function(res){
+        $.get(this.url, {}, function(res){
             if (!this.timestamp){
                 this.timestamp = res.timestamp;
             } else {
@@ -15,7 +17,9 @@ var LiveReloadKid = {
         }.bind(this), 'json');
     },
     
-    start: function(){
+    start: function(param){
+        this.url = param.url;
+        
         setInterval(function() {
             this.update();
         }.bind(this), 1000);
