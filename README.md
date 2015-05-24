@@ -54,4 +54,4 @@ Route::get('/monitor', function(){
 ```
 
 # Thanks to
-LiveReloadKid is inspired by Inspired by https://github.com/dbergey/Reloadr
+LiveReloadKid is inspired by https://github.com/dbergey/Reloadr
