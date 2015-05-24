@@ -11,11 +11,11 @@ class LiveReloadKid
         return 'Hi';
     }
     
-    protected $folder;
+    protected $folders;
     
-    public function __construct($folder)
+    public function __construct($folders)
     {
-        $this->folder = $folder;
+        $this->folders = $folders;
     }
     
     protected function getFIles($path)
@@ -61,7 +61,7 @@ class LiveReloadKid
     
     public function monitor()
     {       
-        $timestamp = $this->getLastModifiedTime($this->resolvePath($this->folder));
+        $timestamp = $this->getLastModifiedTime($this->resolvePath($this->folders));
         
          return json_encode([
             'timestamp' => $timestamp
