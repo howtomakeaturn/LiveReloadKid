@@ -4,9 +4,12 @@
     "description": "Reload your browser when files changed.",
     "keywords": ["livereload", "productivity"],
     "license": "MIT",
+    "require-dev": {
+      "filp/whoops": "1.1.4"
+    },
     "autoload": {
         "psr-4": {
-            "Howtomakeaturn\\LiveReloadKid": "src/"
+            "Howtomakeaturn\\LiveReloadKid\\": "src/Howtomakeaturn/LiveReloadKid"
         }
     }
 }
