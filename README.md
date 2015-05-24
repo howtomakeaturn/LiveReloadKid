@@ -31,5 +31,19 @@ echo $monitor->monitor();
 
 Done!
 
+#Example
+
+let's say you are using Laravel.
+Just add this to the app/routes.php
+```
+Route::get('/monitor', function(){
+    $kid = new Howtomakeaturn\LiveReloadKid\LiveReloadKid([
+        public_path('/js')
+    ]);
+    
+    echo ($kid->monitor());
+});
+```
+
 # Thanks to
 LiveReloadKid is inspired by Inspired by https://github.com/dbergey/Reloadr
