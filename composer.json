@@ -1,0 +1,12 @@
+{
+    "name": "howtomakeaturn/live-reload-kid",
+    "type": "library",
+    "description": "Reload your browser when files changed.",
+    "keywords": ["livereload", "productivity"],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Howtomakeaturn\\LiveReloadKid": "src/"
+        }
+    }
+}
