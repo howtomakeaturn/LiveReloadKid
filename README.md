@@ -4,6 +4,14 @@ Monitoring changes in the file system.
 
 As soon as you save a file the browser is refreshed.
 
+#installation
+You can just download the file to your project, or install it via composer:
+
+```
+composer require "howtomakeaturn/live-reload-kid:0.1.*"
+```
+And move **live-reload-kid.js** file to your asset folder.
+
 #Client-side
 Jquery as the only dependency.
 
