@@ -16,7 +16,7 @@ And move **live-reload-kid.js** file to your asset folder.
 Jquery as the only dependency.
 
 Set the url to where you will trigger the LiveReloadKid.
-```
+```html
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
 <script src='live-reload-kid.js'></script>
 <script>
@@ -29,7 +29,7 @@ Set the url to where you will trigger the LiveReloadKid.
 Pass paths to the folder you want to monitor into the constructor.
 
 And then just return the response.
-```
+```php
 // monitor.php
 
 $monitor = new Howtomakeaturn\LiveReloadKid\LiveReloadKid(['folder/js', 'folder/css']);
@@ -43,7 +43,7 @@ Done!
 
 let's say you are using Laravel.
 Just add this to the app/routes.php
-```
+```php
 Route::get('/monitor', function(){
     $kid = new Howtomakeaturn\LiveReloadKid\LiveReloadKid([
         public_path('/js'), app_path('views')
@@ -53,7 +53,7 @@ Route::get('/monitor', function(){
 });
 ```
 And then in the client side
-```
+```html
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
 <script src='live-reload-kid.js'></script>
 <script>
