@@ -46,7 +46,7 @@ Just add this to the app/routes.php
 ```
 Route::get('/monitor', function(){
     $kid = new Howtomakeaturn\LiveReloadKid\LiveReloadKid([
-        public_path('/js')
+        public_path('/js'), app_path('views')
     ]);
     
     echo ($kid->monitor());
