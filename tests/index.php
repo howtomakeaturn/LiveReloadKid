@@ -30,8 +30,8 @@ require('../vendor/autoload.php');
         }
                 
     };
-    
+</script>
+<script>
     LiveReloadKid.start();
-    
 </script>
 wwww

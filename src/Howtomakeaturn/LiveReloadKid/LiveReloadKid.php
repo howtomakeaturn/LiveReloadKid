@@ -1,5 +1,8 @@
 <?php namespace Howtomakeaturn\LiveReloadKid;
 
+use RecursiveIteratorIterator;
+use RecursiveDirectoryIterator;
+
 class LiveReloadKid
 {
 
@@ -8,16 +11,61 @@ class LiveReloadKid
         return 'Hi';
     }
     
-    protected $file;
+    protected $folder;
     
-    public function __construct($file)
+    public function __construct($folder)
     {
-        $this->file = $file;
+        $this->folder = $folder;
+    }
+    
+    protected function getFIles($path)
+    {
+        $rii = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path));
+
+        $files = array(); 
+
+        foreach ($rii as $file) {
+            if ($file->isDir()){ 
+                continue;
+            }
+            $files[] = $file->getPathname(); 
+        }
+        
+        return $files;
+    }
+    
+    protected function resolvePath($path)
+    {
+        $files = [];
+        if(is_array($path)){
+            foreach($path as $p){
+                $files = array_merge($files, $this->getFIles($p));
+            }
+        } else {
+            $files = $this->getFIles($path);
+        }
+
+        return $files;
+    }
+    
+    protected function getLastModifiedTime($files)
+    {
+        $timestamps = [];
+
+        foreach ( $files as $file ){
+            $timestamps[] = filemtime($file);     
+        }   
+        
+        return max($timestamps);
     }
     
     public function monitor()
-    {
-        return json_encode(['timestamp' => filemtime($this->file)]);
+    {       
+        $timestamp = $this->getLastModifiedTime($this->resolvePath($this->folder));
+        
+         return json_encode([
+            'timestamp' => $timestamp
+        ]);
     }
     
 }
