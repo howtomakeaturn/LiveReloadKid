@@ -1,6 +1,6 @@
 # LiveReloadKid
 
-Monitors changes in the file system. 
+Monitoring changes in the file system. 
 
 As soon as you save a file the browser is refreshed.
 
