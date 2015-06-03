@@ -67,3 +67,5 @@ And then in the client side
 
 # Thanks to
 LiveReloadKid is inspired by https://github.com/dbergey/Reloadr
+
+Thanks [bilzen](http://www.reddit.com/user/bilzen) and [tobozo](http://www.reddit.com/user/tobozo) for the suggestions on Reddit.
