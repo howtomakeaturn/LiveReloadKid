@@ -1,24 +1,21 @@
 # LiveReloadKid
-Automatically reload your browser when specified files are saved.
+Automatically reload your browser when specified files are updated.
 
 Don't need to press **ctrl + R** or **ctrl + F5**  anymore!
 
 Save your fingers!☺
 
-#installation
+#Installation
 You can just download the file to your project, or install it via composer:
 
 ```
 composer require "howtomakeaturn/live-reload-kid:0.1.*"
 ```
-And move **live-reload-kid.js** file to your asset folder.
+And then move **live-reload-kid.js** file to your asset folder.
 
 #Client-side
-Jquery as the only dependency.
-
 Set the url to where you will trigger the LiveReloadKid.
 ```html
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
 <script src='live-reload-kid.js'></script>
 <script>
     LiveReloadKid.start({
@@ -42,7 +39,7 @@ Done!
 
 #Example
 
-let's say you are using Laravel.
+Let's say you are using Laravel.
 Just add this to the app/routes.php
 ```php
 Route::get('/monitor', function(){
@@ -55,7 +52,6 @@ Route::get('/monitor', function(){
 ```
 And then in the client side
 ```html
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
 <script src='live-reload-kid.js'></script>
 <script>
     LiveReloadKid.start({
@@ -64,6 +60,11 @@ And then in the client side
 </script>
 
 ```
+Everytime you update the view files or javascript files, your browser will reload automatically!
+# The Magic Behind
+LiveReloadKid sends an ajax every 3 minutes to ask the server if there's any changes.
+With **long polling** technique, it feels like monitoring in real-time!
+
 
 # Thanks to
 LiveReloadKid is inspired by https://github.com/dbergey/Reloadr
