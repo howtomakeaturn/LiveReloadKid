@@ -1,5 +1,5 @@
 # LiveReloadKid
-Automatically reload your browser when specified files are updated.
+Automatically reload your browser when specified files are updated with only **PHP** and **JavaScript**!
 
 Don't need to press **ctrl + R** or **ctrl + F5**  anymore!
 
