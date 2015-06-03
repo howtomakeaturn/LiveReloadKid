@@ -1,8 +1,9 @@
 # LiveReloadKid
+Automatically reload your browser when specified files are saved.
 
-Monitoring changes in the file system. 
+Don't need to press **ctrl + R** or **ctrl + F5**  anymore!
 
-As soon as you save a file the browser is refreshed.
+Save your fingers!☺
 
 #installation
 You can just download the file to your project, or install it via composer:
@@ -16,7 +17,7 @@ And move **live-reload-kid.js** file to your asset folder.
 Jquery as the only dependency.
 
 Set the url to where you will trigger the LiveReloadKid.
-```
+```html
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
 <script src='live-reload-kid.js'></script>
 <script>
@@ -29,7 +30,7 @@ Set the url to where you will trigger the LiveReloadKid.
 Pass paths to the folder you want to monitor into the constructor.
 
 And then just return the response.
-```
+```php
 // monitor.php
 
 $monitor = new Howtomakeaturn\LiveReloadKid\LiveReloadKid(['folder/js', 'folder/css']);
@@ -43,7 +44,7 @@ Done!
 
 let's say you are using Laravel.
 Just add this to the app/routes.php
-```
+```php
 Route::get('/monitor', function(){
     $kid = new Howtomakeaturn\LiveReloadKid\LiveReloadKid([
         public_path('/js'), app_path('views')
@@ -53,7 +54,7 @@ Route::get('/monitor', function(){
 });
 ```
 And then in the client side
-```
+```html
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
 <script src='live-reload-kid.js'></script>
 <script>
@@ -66,3 +67,5 @@ And then in the client side
 
 # Thanks to
 LiveReloadKid is inspired by https://github.com/dbergey/Reloadr
+
+Thanks [bilzen](http://www.reddit.com/user/bilzen) and [tobozo](http://www.reddit.com/user/tobozo) for the suggestions on Reddit.
