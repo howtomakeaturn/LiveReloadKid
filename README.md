@@ -1,8 +1,9 @@
 # LiveReloadKid
+Automatically reload your browser when specified files are saved.
 
-Monitoring changes in the file system. 
+Don't need to press **ctrl + R** or **ctrl + F5**  anymore!
 
-As soon as you save a file the browser is refreshed.
+Save your fingers!☺
 
 #installation
 You can just download the file to your project, or install it via composer:
