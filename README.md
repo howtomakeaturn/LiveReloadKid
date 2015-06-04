@@ -64,8 +64,7 @@ And then in the client side
 ```
 Everytime you update the view files or javascript files, your browser will reload automatically!
 # The Magic Behind
-LiveReloadKid sends an ajax every 3 minutes to ask the server if there's any changes.
-With **long polling** technique, it feels like monitoring in real-time!
+LiveReloadKid monitors the file system with **long polling** technique, notifying your browser if files modified in real-time!
 
 
 # Thanks to
