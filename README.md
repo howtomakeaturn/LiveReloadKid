@@ -1,9 +1,11 @@
 # LiveReloadKid
 Automatically reload your browser when specified files are updated with only **PHP** and **JavaScript**!
 
-Don't need to press **ctrl + R** or **ctrl + F5**  anymore!
+You're currently developing, and modify css/js files very frequently?
 
-Save your fingers!☺
+Don't need to press **ctrl + R** or **ctrl + F5** to refresh your browser  anymore!
+
+Let LiveReloadKid save your fingers!☺
 
 #Installation
 You can just download the file to your project, or install it via composer:
